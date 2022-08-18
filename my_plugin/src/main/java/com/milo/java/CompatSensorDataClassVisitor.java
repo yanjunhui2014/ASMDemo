@@ -28,7 +28,7 @@ class CompatSensorDataClassVisitor extends ClassVisitor {
         this.mSuperName = superName;
 
         if ("com.milo.asmdemo".equals(mClassName)) {
-            System.out.println(String.format("成功匹配到%s", mClassName));
+            System.out.printf("成功匹配到%s%n", mClassName);
         }
     }
 
