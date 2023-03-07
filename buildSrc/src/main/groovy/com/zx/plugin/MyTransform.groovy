@@ -22,7 +22,10 @@ class MyTransform extends Transform {
         return "MyTransform"
     }
 
-    //输入文件类型，有CLASSES和RESOURCES
+    //CLASSES
+    //代表处理的 java 的 class 文件，返回TransformManager.CONTENT_CLASS
+    //RESOURCES
+    //代表要处理 java 的资源，返回TransformManager.CONTENT_RESOURCES
     @Override
     Set<QualifiedContent.ContentType> getInputTypes() {
         return TransformManager.CONTENT_CLASS
@@ -51,6 +54,11 @@ class MyTransform extends Transform {
     @Override
     void transform(TransformInvocation transformInvocation) throws TransformException, InterruptedException, IOException {
         super.transform(transformInvocation)
+
+//        如果拿取了getInputs()的输入进行消费，则transform后必须再输出给下一级
+//        如果拿取了getReferencedInputs()的输入，则不应该被transform
+//        是否增量编译要以transformInvocation.isIncremental()为准
+
 
         //inputs中是传过来的输入流，其中有两种格式，一种是jar包格式一种是目录格式。
         def inputs = transformInvocation.getInputs()
