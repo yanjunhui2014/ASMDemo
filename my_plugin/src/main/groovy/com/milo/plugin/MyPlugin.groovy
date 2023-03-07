@@ -12,8 +12,8 @@ class MyPlugin implements Plugin<Project> {
 
         System.out.println("Hello this is MyPlugin")
 
-        AppExtension android  = project.getExtensions().getByType(AppExtension.class)
-        android.registerTransform(new CompatSensorTransform())
+//        AppExtension android  = project.getExtensions().getByType(AppExtension.class)
+//        android.registerTransform(new CompatSensorTransform())
     }
 
 }

@@ -39,15 +39,15 @@ class CompatSensorTransform extends Transform {
         Collection<TransformInput> transformInputs = transformInvocation.inputs
         TransformOutputProvider outputProvider = transformInvocation.outputProvider
 
-        transformInputs.each { TransformInput transformInput ->
-            //directoryInputs代表着以源码方式参与项目编译的所有目录结构及其目录下的源码文件
-            //比如我们手写的类以及R.class,BuildConfig.class以及MainActivity.class，
-            // Gradle3.6以后R文件打包成R.jar文件了
-            transformInput.directoryInputs.each { DirectoryInput directoryInput ->
-                handleDirectoryInput(directoryInput)
-            }
-
-        }
+//        transformInputs.each { TransformInput transformInput ->
+//            //directoryInputs代表着以源码方式参与项目编译的所有目录结构及其目录下的源码文件
+//            //比如我们手写的类以及R.class,BuildConfig.class以及MainActivity.class，
+//            // Gradle3.6以后R文件打包成R.jar文件了
+//            transformInput.directoryInputs.each { DirectoryInput directoryInput ->
+//                handleDirectoryInput(directoryInput)
+//            }
+//
+//        }
     }
 
     void handleDirectoryInput(DirectoryInput directoryInput) {

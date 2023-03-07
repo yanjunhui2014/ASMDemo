@@ -1,6 +1,5 @@
 apply plugin: "groovy"
 apply plugin: "maven"
-apply plugin: 'org.jetbrains.kotlin.jvm'
 
 sourceSets {
     main {
@@ -33,7 +32,7 @@ dependencies {
 }
 
 group='com.milo.plugin'
-version='0.0.1'
+version="$my_plugin_version"
 
 uploadArchives{
     repositories {
