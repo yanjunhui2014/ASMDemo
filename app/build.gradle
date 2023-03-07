@@ -1,5 +1,6 @@
 apply plugin:'com.android.application'
-apply plugin: 'com.zx.plugin'
+//apply plugin: 'com.zx.plugin' //调试用 - buildSrc - 源码直接运行
+apply plugin:'com.milo.plugin' //正式用 - repo
 
 android {
     compileSdkVersion 28

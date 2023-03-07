@@ -1,4 +1,4 @@
-package com.zx.plugin
+package com.milo.plugin
 
 import com.android.build.gradle.AppExtension
 import org.gradle.api.Plugin
